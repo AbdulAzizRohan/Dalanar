@@ -1,0 +1,251 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{Suwarjono2021}{article}{}{}
+      \name{author}{9}{}{%
+        {{hash=3e48e884eea9643a1415b90fa091fe78}{%
+           family={Suwarjono},
+           familyi={S\bibinitperiod},
+           given={Suwarjono},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4cb83bab8b612a51b82ff94c50d9b159}{%
+           family={Wayangkau},
+           familyi={W\bibinitperiod},
+           given={Izak\bibnamedelima Habel},
+           giveni={I\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=ef7a2d88749f83cf95ba8880791731a4}{%
+           family={Istanto},
+           familyi={I\bibinitperiod},
+           given={Teddy},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6550fbf16bf1fe200f95c51382da6a58}{%
+           family={Rachmat},
+           familyi={R\bibinitperiod},
+           given={Rachmat},
+           giveni={R\bibinitperiod}}}%
+        {{hash=05fd68f421e34ca9fb48ba0d2c776129}{%
+           family={Marsujitullah},
+           familyi={M\bibinitperiod},
+           given={Marsujitullah},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5fc6b29f02f83401c95e2d2616b570db}{%
+           family={Hariyanto},
+           familyi={H\bibinitperiod},
+           given={Hariyanto},
+           giveni={H\bibinitperiod}}}%
+        {{hash=58108206f34a64e799b4f5cd6a160a0d}{%
+           family={Caesarendra},
+           familyi={C\bibinitperiod},
+           given={Wahyu},
+           giveni={W\bibinitperiod}}}%
+        {{hash=3218bf622bd86f259171b70521ffb52d}{%
+           family={Legutko},
+           familyi={L\bibinitperiod},
+           given={Stanislaw},
+           giveni={S\bibinitperiod}}}%
+        {{hash=af5f5d8050986e28082c002ff2ea73a4}{%
+           family={Glowacz},
+           familyi={G\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI AG}%
+      }
+      \strng{namehash}{2c064e01347115d7edfe79019cc4da2c}
+      \strng{fullhash}{d40566afc1d4ab37401e51fb0ddb92d7}
+      \strng{fullhashraw}{d40566afc1d4ab37401e51fb0ddb92d7}
+      \strng{bibnamehash}{2c064e01347115d7edfe79019cc4da2c}
+      \strng{authorbibnamehash}{2c064e01347115d7edfe79019cc4da2c}
+      \strng{authornamehash}{2c064e01347115d7edfe79019cc4da2c}
+      \strng{authorfullhash}{d40566afc1d4ab37401e51fb0ddb92d7}
+      \strng{authorfullhashraw}{d40566afc1d4ab37401e51fb0ddb92d7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{1}
+      \field{journaltitle}{Knowledge}
+      \field{title}{Design of a Home Fire Detection System Using Arduino and SMS Gateway}
+      \field{volume}{1}
+      \field{year}{2021}
+      \field{pages}{61\bibrangedash 74}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.3390/knowledge1010007
+      \endverb
+    \endentry
+    \entry{Siregar2024}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=b5f989ec2a880c66c64744ac3dc54ea2}{%
+           family={Siregar},
+           familyi={S\bibinitperiod},
+           given={Rahmat\bibnamedelima Fauzi},
+           giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=9970a9950b11ff372f30c642c71516c2}{%
+           family={Affandi},
+           familyi={A\bibinitperiod},
+           given={Affandi},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f870c0053def6828d2ec0ff3edb145e8}{%
+           family={Rohana},
+           familyi={R\bibinitperiod},
+           given={Rohana},
+           giveni={R\bibinitperiod}}}%
+        {{hash=cdadbd8e6a13f3ceba0224c1dffa6554}{%
+           family={Nasution},
+           familyi={N\bibinitperiod},
+           given={Arya\bibnamedelima Rudi},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=5dfa8faebba5efbc3015367e25f570ef}{%
+           family={Tanjung},
+           familyi={T\bibinitperiod},
+           given={Iqbal},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Universitas Muhammadiyah Yogyakarta}%
+      }
+      \strng{namehash}{f9b0b12e34c8cd02999809a98d475f13}
+      \strng{fullhash}{fec3dbb4fef391123259102986fe69ec}
+      \strng{fullhashraw}{fec3dbb4fef391123259102986fe69ec}
+      \strng{bibnamehash}{fec3dbb4fef391123259102986fe69ec}
+      \strng{authorbibnamehash}{fec3dbb4fef391123259102986fe69ec}
+      \strng{authornamehash}{f9b0b12e34c8cd02999809a98d475f13}
+      \strng{authorfullhash}{fec3dbb4fef391123259102986fe69ec}
+      \strng{authorfullhashraw}{fec3dbb4fef391123259102986fe69ec}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{2}
+      \field{journaltitle}{Journal of Electrical Technology UMY}
+      \field{title}{IoT Smart Control System: Smoke and Fire Detection Using SIM900A Module}
+      \field{volume}{7}
+      \field{year}{2024}
+      \field{pages}{48\bibrangedash 56}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.18196/jet.v7i2.19908
+      \endverb
+    \endentry
+    \entry{Sarwar2019}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=a3af443e339b21df7b2b02039bb6ecb8}{%
+           family={Sarwar},
+           familyi={S\bibinitperiod},
+           given={Barera},
+           giveni={B\bibinitperiod}}}%
+        {{hash=83e95ef811fe0ba1f96bba6d6d220bc4}{%
+           family={Bajwa},
+           familyi={B\bibinitperiod},
+           given={Imran\bibnamedelima Sarwar},
+           giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=1e688c25dbf82add7d22361a70bd24eb}{%
+           family={Jamil},
+           familyi={J\bibinitperiod},
+           given={Noreen},
+           giveni={N\bibinitperiod}}}%
+        {{hash=ed01f2eb217477d90f39731b77b3c947}{%
+           family={Ramzan},
+           familyi={R\bibinitperiod},
+           given={Shabana},
+           giveni={S\bibinitperiod}}}%
+        {{hash=34d77dad91120f0086a4c2fb48ae6c5d}{%
+           family={Sarwar},
+           familyi={S\bibinitperiod},
+           given={Nadeem},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI AG}%
+      }
+      \strng{namehash}{b9151c0368171c6cfe6ec66adfb69167}
+      \strng{fullhash}{b8d2d047c56b357f459887f6c39a9dfa}
+      \strng{fullhashraw}{b8d2d047c56b357f459887f6c39a9dfa}
+      \strng{bibnamehash}{b8d2d047c56b357f459887f6c39a9dfa}
+      \strng{authorbibnamehash}{b8d2d047c56b357f459887f6c39a9dfa}
+      \strng{authornamehash}{b9151c0368171c6cfe6ec66adfb69167}
+      \strng{authorfullhash}{b8d2d047c56b357f459887f6c39a9dfa}
+      \strng{authorfullhashraw}{b8d2d047c56b357f459887f6c39a9dfa}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{14}
+      \field{journaltitle}{Sensors}
+      \field{title}{An Intelligent Fire Warning Application Using IoT and an Adaptive Neuro-Fuzzy Inference System}
+      \field{volume}{19}
+      \field{year}{2019}
+      \field{pages}{3150}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/s19143150
+      \endverb
+    \endentry
+    \entry{Wilson2020}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=6265a53ac5bc651ef477e7d6a9e2c6c8}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Daniel\bibnamedelima Lawrence},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=2434f9af8449321d91511ba0e789a853}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Kendra\bibnamedelima N.},
+           giveni={K\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=39ffb6abc5fa5fa88edc8dfbda7bf961}{%
+           family={Pillarisetti},
+           familyi={P\bibinitperiod},
+           given={Ajay},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI AG}%
+      }
+      \strng{namehash}{312af4bd3f7729537d36bc79bd0761b0}
+      \strng{fullhash}{3fdd5fea6f40adb27d84c88ebe8d904e}
+      \strng{fullhashraw}{3fdd5fea6f40adb27d84c88ebe8d904e}
+      \strng{bibnamehash}{3fdd5fea6f40adb27d84c88ebe8d904e}
+      \strng{authorbibnamehash}{3fdd5fea6f40adb27d84c88ebe8d904e}
+      \strng{authornamehash}{312af4bd3f7729537d36bc79bd0761b0}
+      \strng{authorfullhash}{3fdd5fea6f40adb27d84c88ebe8d904e}
+      \strng{authorfullhashraw}{3fdd5fea6f40adb27d84c88ebe8d904e}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{5}
+      \field{journaltitle}{Sustainability}
+      \field{title}{An Integrated Sensor Data Logging, Survey, and Analytics Platform for Field Research and Its Application in HAPIN, a Multi-Center Household Energy Intervention Trial}
+      \field{volume}{12}
+      \field{year}{2020}
+      \field{pages}{1805}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/su12051805
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

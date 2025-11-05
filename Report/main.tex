@@ -1,64 +1,277 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[twocolumn]{report}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{geometry}
-\usepackage{graphicx}
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{empheq}
-\usepackage{mdframed}
-\usepackage{booktabs}
-\usepackage{lipsum}
-\usepackage{graphicx}
-\usepackage{color}
-\usepackage{psfrag}
-\usepackage{pgfplots}
-\usepackage{bm}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Required packages
+\usepackage[top=30mm,bottom=25mm,left=30mm,right=25mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{setspace}        % For line spacing
+\usepackage{graphicx}        % For images
+\usepackage{amsmath}         % For mathematical equations
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref} % For smart references
+\usepackage{caption}         % For figure and table captions
+\usepackage{fancyhdr}        % For header and footer
+\usepackage{titlesec}        % For formatting titles
+\usepackage{enumitem}        % For list customization
+\usepackage{longtable}
+\usepackage{subcaption}
+\usepackage[version=4]{mhchem}
+\usepackage{float}
+\usepackage{bookmark}
+\usepackage{calc}            % For width calculations
+\usepackage{svg}
+\usepackage[breakable, skins]{tcolorbox}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{minted}
+\usepackage{pdfpages}
+\usepackage[backend=biber, style=ieee, sorting=none]{biblatex}
+\addbibresource{ref.bib} %Import the bibliography file
 
-% Other Settings
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Table} 
+\def\figureautorefname{Fig.}      
+\def\tableautorefname{Table}    
 
-%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\geometry{a4paper}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
-\definecolor{ocre}{RGB}{243,102,25}
-\definecolor{mygray}{RGB}{243,243,244}
-\definecolor{deepGreen}{RGB}{26,111,0}
-\definecolor{shallowGreen}{RGB}{235,255,255}
-\definecolor{deepBlue}{RGB}{61,124,222}
-\definecolor{shallowBlue}{RGB}{235,249,255}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstset{style=mystyle}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
-\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
-\theoremstyle{mytheoremstyle}
-\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
-\theoremstyle{mytheoremstyle}
-\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
-\theoremstyle{myproblemstyle}
-\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fancypagestyle{mainstyle}{
+    \fancyhf{} % Clear all header/footer
+    \fancyhead[R]{\textbf{Page | }\thepage} % Right header with custom format
+    \renewcommand{\headrulewidth}{0pt} % Remove header line
+}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plotting Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepgfplotslibrary{colorbrewer}
-\pgfplotsset{width=8cm,compat=1.9}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{mainstyle}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{ESE 4126}
-\author{Haoyun Qin}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% Document begin
 \begin{document}
-    \maketitle
-    
+
+% Title page
+\begin{titlepage}
+  \begin{center}
+    \vspace*{1cm}
+
+    \Large
+    \textbf{Fire Alarm System with Data Logging Capabilities}\\
+
+    \vspace{0.5cm}
+    \normalsize
+    \textbf{Course Code: ESE 4126}\\
+    \textbf{Course Name: Sessional on ESE 4125}
+
+    \vspace{2cm}
+    \large
+    \textbf{Lab Report}
+
+    \vspace{3cm}
+    \normalsize
+    \textbf{Submitted by:}\\
+    Mahmud Abdul Aziz Rohan\\
+    Roll No: 2013021\\ 
+    Year: 4\textsuperscript{th}    Term: 1\textsuperscript{st}\\
+    Department of Energy Science and Engineering\\
+    Khulna University of Engineering \& Technology
+
+    \vspace{2cm}
+    \textbf{Submitted to:}\\
+    Dr. Md. Hasan Ali \\
+    Professor \\ 
+    \&\\
+    Mostafizur Rahaman \\
+    Lecturer\\
+    Department of Energy Science and Engineering\\
+    Khulna University of Engineering \& Technology\\
+    Khulna-9203, Bangladesh \\
+
+    \vspace{2cm}
+    \textbf{Date of Submission: \today}
+  \end{center}
+\end{titlepage}   
+
+% Main content begins
+\clearpage
+\pagenumbering{arabic}
+
+\section{Introduction}
+
+\par
+Fire incidents represent a pervasive and perishing threat to both human life and
+property across residential, commercial, and industrial settings
+\parencite{Suwarjono2021}. The primary factor to initiate a fast response and
+reduce damage requires immediate and dependable detection of fire events
+\parencite{Siregar2024}. Traditional fire detection systems often lack the
+real-time monitoring and advanced diagnostic capabilities that modern embedded
+systems can provide \parencite{Sarwar2019}. The combination of inexpensive
+dependable microcontrollers with sensor systems enables the creation of
+cost-effective fire safety solutions which deliver both accessibility and
+operational efficiency \parencite{Sarwar2019}.
+
+\par
+This project aims to design an Intelligent Fire Alarm System utilizing the
+Arduino Uno microcontroller, a widely recognized and easily programmable
+platform based on the ATmega328P \parencite{Sarwar2019}. The system includes
+multiple fire detection sensors, such as smoke detectors (MQ-2/MQ-7) and
+temperature sensors (e.g., TMP36), to monitor the environment for signs of a
+potential fire.
+
+\par
+A critical feature of this project is its data logging capability. The system's
+ability to both capture and save sensor information with event timestamps
+delivers superior benefits when compared to conventional alarm systems
+\parencite{Wilson2020}. Data logging enables permanent system observation which
+supports environmental condition analysis before alarm activation and helps
+decrease false alarms by tracking sensor data patterns over time
+\parencite{Sarwar2019}. The collected data serves multiple purposes such as
+system diagnostics and threshold optimization and post-incident analysis.
+
+\par
+The primary objective of this report is to detail the design, construction, and
+testing of the fire alarm system, demonstrating the effective integration of the
+Arduino Uno, sensor components, and a data logging mechanism to create a
+reliable, low-cost safety solution. 
+
+\section{Objectives}
+
+Fire alarm systems are essential safety equipments. Making them capable of
+logging data will enable safety officers to analyze the fire hazard and risk in
+any particular environment for a specific period of time and will allow them to
+make predictions about them. Keeping this in context, the objectives of this
+experiment are
+  
+\begin{enumerate}[label=\roman*]
+  \item to design a fire alarm system using Arduino UNO in Tinkercad
+  \item to incorporate data logging methods with the fire alarm system
+  \item to extract the logged data from the system 
+\end{enumerate}
+
+\section{Fire Alarm System with Data Logging Capabilities}
+
+\subsection{Arduino UNO R3}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{figures/arduino.pdf}
+  \end{center}
+  \caption{Arduino UNO R3}\label{fig:arduino}
+\end{figure}
+
+
+\subsection{System Description}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/diagram.png}
+  \end{center}
+  \caption{Diagram of the setup in Tinkercad}\label{fig:diagram}
+\end{figure}
+
+
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/schematic.pdf}
+  \end{center}
+  \caption{Schematic diagram of the circuit used in the project}\label{fig:schematic}
+\end{figure}
+
+
+
+\subsection{Code}
+
+\lstinputlisting[caption=sketch.ino]{code/sketch.ino}
+
+\par 
+The \texttt{setup()} function is used for initilizing the input and output
+ports. The \texttt{loop()} function runs with a delay of 1 s declared in the
+last line of the function as \texttt{delay(1000)}.
+The conditions for the alart signals are either the gas sensor readings should
+be above 400 or the temperature reading should be above 30 degree celsius or
+both. 
+The \texttt{logData(unsigned long timestamp)} function is used for logging the
+data to the serial monitor. From this monitor the logged output can be copied
+and used as a CSV file for further analysis. The time lag between each data logging is
+set at 5000 ms is the begining of the code as a global variable \texttt{const
+unsigned long logInterval}. 
+
+\section{Result}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/result_normal.png}
+  \end{center}
+  \caption{Fire Alarm System under normal conditions}\label{fig:result_normal}
+\end{figure}
+
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/result_alert_gas.png}
+  \end{center}
+  \caption{Alarm engaged because of excess amount of gas}\label{fig:result_alert_gas}
+\end{figure}
+
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/result_alert_temp.png}
+  \end{center}
+  \caption{Alarm engaged because of high temperature}\label{fig:result_alert_temp}
+\end{figure}
+
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/result_data_logging.png}
+  \end{center}
+  \caption{Logged data in the serial monitor in CSV format}\label{fig:result_data_logging}
+\end{figure}
+
+
+
+\section{Discussion}
+
+The results show that the fire alarm system is functional in the simulated
+conditions. Figure~\ref{fig:result_normal} is showing the normal conditions
+when the alarm is not yet engaged. In Figure~\ref{fig:result_alert_gas} and
+Figure~\ref{fig:result_alert_temp}, the alarm system is engaged because of
+excess gas and high temperature. This confirms the expected behaviour of the
+system under actual conditions. The data from the alarm system can be collected
+from the serial monitor as shown in Figure~\ref{fig:result_data_logging}. This
+data can be anayzed using various tools for future predictions of abnormal
+conditions, or detecting anomaly in the system.
+
+\section{Conclusion}
+
+A fire alarm system was successfully designed in Tinkercad using Arduino UNO R3.
+Data logging was also incorporated using the serial print strategy. The data can
+be extracted from the serial monitor by copying from the monitor and storing it
+in a file. Further modifications can be made by using SD card module to store
+the data in a file. 
+
+\printbibliography
+
 \end{document}
